@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="MyTinerary">
+       <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+       <class>myTinerary.entities.AuthenticatedUser</class>
+       <class>myTinerary.entities.ShareableTrip</class>
+       <class>myTinerary.entities.SharedTrip</class>
+       <class>myTinerary.entities.SubTrip</class>
+       <class>myTinerary.entities.TripBase</class>
+       <class>myTinerary.entities.TripDetail</class>
+       <class>myTinerary.entities.ToDoListDetail</class>
+       <class>myTinerary.entities.ToDoListItem</class>
+       <class>myTinerary.entities.ReservationDetail</class>
+       <class>myTinerary.entities.SubtripDetail</class>
+       <class>myTinerary.entities.FlightDetail</class>
+       <class>myTinerary.entities.ActivityLinkDetail</class>
+       <class>myTinerary.entities.EnhancedLinkDetail</class>
+       <class>myTinerary.entities.FlightServiceDetail</class>
+       <class>myTinerary.entities.TripNotification</class>
+       <class>myTinerary.entities.TripNotificationList</class>
+        <properties>
+               <!-- Consider adding for batch operations
+                   <property name="eclipselink.jdbc.batch-writing" value="JDBC" />
+                   <property name="eclipselink.jdbc.cache-statements" value="true" />                
+               -->
+            <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://XXXXXX.database.windows.net:1433;database=mytinerary" />
+            <property name="javax.persistence.jdbc.user" value="XXXXXX" />
+            <property name="javax.persistence.jdbc.password" value="XXXXXX" />        
+
+            <property name="eclipseLink.jdbc.ddl-generation" value="drop-and-create-tables" />
+            <property name="eclipseLink.logging.level" value="INFO" />
+        </properties>	
+	</persistence-unit>
+</persistence>
